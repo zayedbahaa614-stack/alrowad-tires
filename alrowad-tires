@@ -1,0 +1,3108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الرواد | كوتشات وبطاريات وجنوط سيارات</title>
+    <meta name="description" content="متجر متكامل لبيع كوتشات وبطاريات وجنوط جميع أنواع السيارات - توصيل مجاني - أسعار تنافسية - ضمان حقيقي">
+    <meta name="keywords" content="كوتشات, بطاريات, جنوط, سيارات, إطارات, بحيرة, بدر">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #2b6cb0;
+            --accent-light: #4299e1;
+            --success: #38a169;
+            --warning: #ed8936;
+            --danger: #e53e3e;
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --gold: #d69e2e;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.7;
+            direction: rtl;
+        }
+
+        /* تصميم الهيدر المحسن */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            background: rgba(255, 255, 255, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .logo-section:hover .logo-icon {
+            transform: rotate(15deg);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+            font-weight: 800;
+            transition: var(--transition);
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: #cbd5e0;
+        }
+
+        .contact-info-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            text-align: left;
+        }
+
+        .contact-info-header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+        }
+
+        .contact-info-header a:hover {
+            color: var(--gold);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-call {
+            background: var(--success);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .btn-call:hover {
+            background: #2f855a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(56, 161, 105, 0.4);
+        }
+
+        /* القائمة الرئيسية المحسنة */
+        .main-nav {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 82px;
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 1rem 1.2rem;
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            background: rgba(66, 153, 225, 0.1);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent);
+            transition: var(--transition);
+            border-radius: 3px;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--light);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            width: 300px;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.5rem;
+            width: 100%;
+            font-family: 'Cairo', sans-serif;
+            outline: none;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        /* زر القائمة للجوال */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--light);
+        }
+
+        /* البانر الرئيسي المحسن */
+        .hero-section {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(45, 55, 72, 0.85)), 
+                        url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(214, 158, 46, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        /* قسم المنتجات المحسن */
+        .products-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, #f5f7fa 0%, #ffffff 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title {
+            font-size: 2.7rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 120px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            color: #718096;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            padding: 0.9rem 2.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .category-tab:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(43, 108, 176, 0.3);
+        }
+
+        .category-tab i {
+            font-size: 1.3rem;
+        }
+
+        /* شبكة المنتجات المحسنة */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid #e2e8f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-light);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--success);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-badge.hot {
+            background: linear-gradient(135deg, var(--danger) 0%, #fc8181 100%);
+        }
+
+        .product-badge.new {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+        }
+
+        .product-badge.offer {
+            background: linear-gradient(135deg, var(--warning) 0%, #f6ad55 100%);
+        }
+
+        .product-image {
+            height: 220px;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 1.8rem;
+        }
+
+        .product-category {
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        .product-description {
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .spec-item {
+            background: var(--light);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .current-price {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .old-price {
+            font-size: 1.3rem;
+            color: #a0aec0;
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--success);
+            font-weight: 600;
+            background: rgba(56, 161, 105, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 0.9rem;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+        }
+
+        .btn-call-now {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        .btn-details {
+            background: var(--light);
+            color: var(--dark);
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-action:hover {
+            opacity: 0.95;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-details:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* قسم المقاسات والأنواع المحسن */
+        .specs-section {
+            background: white;
+            padding: 5rem 2rem;
+        }
+
+        .specs-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .specs-tabs::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .specs-tabs::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .specs-tabs::-webkit-scrollbar-thumb {
+            background: var(--accent-light);
+            border-radius: 10px;
+        }
+
+        .specs-tab {
+            background: var(--light);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 1rem 1.8rem;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            font-size: 1rem;
+        }
+
+        .specs-tab:hover {
+            background: rgba(66, 153, 225, 0.1);
+            border-color: var(--accent-light);
+        }
+
+        .specs-tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(43, 108, 176, 0.2);
+        }
+
+        .specs-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .specs-content.active {
+            display: block;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .spec-item-card {
+            background: var(--light);
+            padding: 1.8rem;
+            border-radius: var(--radius);
+            border-right: 4px solid var(--accent);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .spec-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-light);
+        }
+
+        .spec-item-title {
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .spec-item-sizes {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* قسم العروض المحسن */
+        .offers-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offers-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .offers-slider {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .offer-slide {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .offer-slide:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--warning);
+        }
+
+        .offer-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--danger) 0%, #fc8181 100%);
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(229, 62, 62, 0.3);
+        }
+
+        .offer-slide h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .offer-slide p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* قسم الماركات المحسن */
+        .brands-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .brand-item {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            transition: var(--transition);
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+        }
+
+        .brand-item:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(66, 153, 225, 0.3);
+            border-color: var(--accent);
+        }
+
+        .brand-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .brand-item:hover .brand-icon {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .brand-item span {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* قسم الاتصال المحسن */
+        .contact-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h3 {
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+            padding: 1rem;
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+
+        .contact-item div {
+            flex: 1;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--gold);
+        }
+
+        .contact-item p, .contact-item a {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .contact-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            height: 350px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* الفوتر المحسن */
+        .main-footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            color: var(--gold);
+            margin-bottom: 1.8rem;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-column p {
+            color: #cbd5e0;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.3rem 0;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-right: 15px;
+        }
+
+        .footer-links i {
+            font-size: 0.8rem;
+            color: var(--accent-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        .copyright p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* الأزرار العائمة المحسنة */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: var(--success);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            transition: var(--transition);
+            position: relative;
+            border: 3px solid white;
+        }
+
+        .floating-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            animation: pulse 2s infinite;
+        }
+
+        .floating-btn.call {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .floating-btn::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-right: 4px solid var(--accent);
+        }
+
+        .floating-btn:hover::after {
+            opacity: 1;
+            visibility: visible;
+            right: 85px;
+        }
+
+        /* تحسينات إضافية */
+        .rating {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .product-sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .size-badge {
+            background: #e2e8f0;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #4a5568;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .size-badge:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .discount-badge {
+            background: var(--danger);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        /* الرسوم المتحركة */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes pulse {
+            0% { 
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); 
+            }
+            70% { 
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); 
+            }
+            100% { 
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); 
+            }
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(50px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+
+        /* تنسيقات الجوال */
+        @media (max-width: 1200px) {
+            .header-container, .nav-container {
+                max-width: 100%;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .contact-info-header {
+                text-align: center;
+                align-items: center;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            
+            .search-box {
+                width: 100%;
+                max-width: 500px;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: white;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                border-radius: 0 0 15px 15px;
+                padding: 1.5rem;
+                z-index: 1000;
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                animation: slideIn 0.3s ease-out;
+            }
+            
+            .nav-links li {
+                width: 100%;
+            }
+            
+            .nav-links a {
+                justify-content: center;
+                padding: 1.2rem;
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .category-tabs {
+                gap: 0.8rem;
+            }
+            
+            .category-tab {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.4rem;
+            }
+            
+            .brands-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .offers-slider {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-container, .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-call {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .category-tabs {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .category-tab {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-item {
+                min-width: 100px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .specs-tabs {
+                flex-direction: column;
+            }
+            
+            .specs-tab {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        /* تحسينات إضافية للتجربة */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--success);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 10000;
+            animation: slideIn 0.3s ease-out;
+            display: none;
+            max-width: 350px;
+        }
+
+        .toast.show {
+            display: block;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 110px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* تحسينات النموذج */
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        .btn-submit {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="logo-icon">
+                    <i class="fas fa-tire"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>الرواد للكوتش والبطاريات والجنوط</h1>
+                    <p>محافظة البحيرة - مركز بدر | متخصصون منذ 2010</p>
+                </div>
+            </div>
+            
+            <div class="contact-info-header">
+                <a href="tel:01063221136">
+                    <i class="fas fa-phone"></i>
+                    01063221136
+                </a>
+                <a href="https://wa.me/201063221136" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp: 01063221136
+                </a>
+            </div>
+            
+            <div class="header-actions">
+                <a href="tel:01063221136" class="btn-call">
+                    <i class="fas fa-phone-alt"></i>
+                    اتصل الآن
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#products"><i class="fas fa-shopping-cart"></i> المنتجات</a></li>
+                <li><a href="#tires"><i class="fas fa-tire"></i> الكوتشات</a></li>
+                <li><a href="#batteries"><i class="fas fa-car-battery"></i> البطاريات</a></li>
+                <li><a href="#rims"><i class="fas fa-cog"></i> الجنوط</a></li>
+                <li><a href="#offers"><i class="fas fa-tags"></i> العروض</a></li>
+                <li><a href="#brands"><i class="fas fa-trademark"></i> الماركات</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i> اتصل بنا</a></li>
+            </ul>
+            
+            <div class="search-box">
+                <input type="text" placeholder="ابحث عن مقاس أو نوع منتج..." id="searchInput">
+                <button type="button" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- البانر الرئيسي -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h2>👑 متجر الرواد للكوتش والبطاريات والجنوط</h2>
+            <p>المتخصص الأول في محافظة البحيرة لتوريد وتركيب جميع إطارات وبطاريات وجنوط السيارات بأفضل الأسعار وأعلى جودة</p>
+            
+            <div class="hero-actions">
+                <a href="#products" class="btn-call">عرض المنتجات</a>
+                <a href="tel:01063221136" class="btn-call" style="background: var(--warning);">طلب سريع</a>
+                <a href="https://wa.me/201063221136" class="btn-call" style="background: #25D366;">واتساب مباشر</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">+5000</span>
+                    <span class="stat-label">منتج متوفر</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">ماركة عالمية</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">خدمة عملاء</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">ضمان الجودة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/201063221136" class="floating-btn whatsapp" target="_blank" data-tooltip="طلب عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:01063221136" class="floating-btn call" data-tooltip="اتصال فوري">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- زر العودة للأعلى -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- قسم المنتجات -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2 class="section-title">🛒 جميع المنتجات المتاحة</h2>
+            <p class="section-subtitle">اختر من بين مئات المنتجات الأصلية بأسعار تنافسية مع ضمان الجودة وخدمة التوصيل المجاني</p>
+        </div>
+        
+        <!-- تبويبات التصنيف -->
+        <div class="category-tabs">
+            <button class="category-tab active" data-category="all">
+                <i class="fas fa-th-large"></i> جميع المنتجات
+            </button>
+            <button class="category-tab" data-category="tires">
+                <i class="fas fa-tire"></i> الكوتشات
+            </button>
+            <button class="category-tab" data-category="batteries">
+                <i class="fas fa-car-battery"></i> البطاريات
+            </button>
+            <button class="category-tab" data-category="rims">
+                <i class="fas fa-cog"></i> الجنوط
+            </button>
+            <button class="category-tab" data-category="offers">
+                <i class="fas fa-fire"></i> العروض الحارة
+            </button>
+        </div>
+        
+        <!-- شبكة المنتجات -->
+        <div class="products-grid" id="productsGrid">
+            <!-- المنتجات ستعرض هنا ديناميكياً -->
+        </div>
+    </section>
+
+    <!-- قسم المقاسات والأنواع -->
+    <section class="specs-section" id="specs">
+        <div class="section-header">
+            <h2 class="section-title">📏 جميع المقاسات والأنواع المتوفرة</h2>
+            <p class="section-subtitle">اختر المقاس المناسب لسيارتك من بين مئات الخيارات المتاحة</p>
+        </div>
+        
+        <!-- تبويبات المقاسات -->
+        <div class="specs-tabs">
+            <button class="specs-tab active" data-spec="tire-sizes">مقاسات الكوتشات</button>
+            <button class="specs-tab" data-spec="battery-types">أنواع البطاريات</button>
+            <button class="specs-tab" data-spec="rim-sizes">مقاسات الجنوط</button>
+            <button class="specs-tab" data-spec="car-types">حسب نوع السيارة</button>
+        </div>
+        
+        <!-- محتوى المقاسات -->
+        <div class="specs-content active" id="tire-sizes">
+            <div class="specs-grid">
+                <!-- مقاسات الكوتشات -->
+            </div>
+        </div>
+        
+        <div class="specs-content" id="battery-types">
+            <div class="specs-grid">
+                <!-- أنواع البطاريات -->
+            </div>
+        </div>
+        
+        <div class="specs-content" id="rim-sizes">
+            <div class="specs-grid">
+                <!-- مقاسات الجنوط -->
+            </div>
+        </div>
+        
+        <div class="specs-content" id="car-types">
+            <div class="specs-grid">
+                <!-- حسب نوع السيارة -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العروض -->
+    <section class="offers-section" id="offers">
+        <div class="section-header">
+            <h2 class="section-title">🔥 عروض اليوم الخاصة</h2>
+            <p class="section-subtitle">استفد من عروضنا الحصرية لفترة محدودة</p>
+        </div>
+        
+        <div class="offers-slider">
+            <!-- العروض ستظهر هنا -->
+        </div>
+    </section>
+
+    <!-- قسم الماركات -->
+    <section class="brands-section" id="brands">
+        <div class="section-header">
+            <h2 class="section-title">🏷️ أشهر الماركات العالمية</h2>
+            <p class="section-subtitle">نوفر لك أفضل الماركات العالمية بأسعار تنافسية</p>
+        </div>
+        
+        <div class="brands-grid">
+            <!-- الماركات ستظهر هنا -->
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2 class="section-title" style="color: white;">📍 تواصل معنا الآن</h2>
+            <p class="section-subtitle" style="color: #cbd5e0;">نحن هنا لخدمتك على مدار الساعة</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>معلومات الاتصال</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>العنوان:</strong>
+                        <p>محافظة البحيرة - مركز بدر - أمام مدرسة بدر الثانوية</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>الهاتف:</strong>
+                        <p><a href="tel:01063221136" style="color: white;">01063221136</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>واتساب:</strong>
+                        <p><a href="https://wa.me/201063221136" target="_blank" style="color: white;">01063221136</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>ساعات العمل:</strong>
+                        <p>من الساعة 8 صباحاً حتى 12 مساءً</p>
+                        <p>جميع أيام الأسبوع بما فيها الجمعة</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                        <strong>خدمة التوصيل:</strong>
+                        <p>مجاني داخل مركز بدر</p>
+                        <p>بسعر رمزي لباقي مراكز البحيرة</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://wa.me/201063221136" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:01063221136" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=بدر%20البحيرة&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    style="width:100%; height:100%; border:0;"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>الرواد للكوتش والبطاريات</h4>
+                <p>متخصصون في توريد وتركيب جميع أنواع كوتشات وبطاريات وجنوط السيارات منذ عام 2010. نقدم خدمة التوصيل المجاني والتركيب الاحترافي بأسعار تنافسية.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/201063221136" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:01063221136" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="#products"><i class="fas fa-chevron-left"></i> المنتجات</a></li>
+                    <li><a href="#tires"><i class="fas fa-chevron-left"></i> الكوتشات</a></li>
+                    <li><a href="#batteries"><i class="fas fa-chevron-left"></i> البطاريات</a></li>
+                    <li><a href="#rims"><i class="fas fa-chevron-left"></i> الجنوط</a></li>
+                    <li><a href="#offers"><i class="fas fa-chevron-left"></i> العروض</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>منتجاتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> كوتشات سيارات ملاكي</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> كوتشات نقل وميكروباص</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> بطاريات 40-200 أمبير</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> جنوط ألماني وتركي</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> جنوط رياضية SUV</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> جميع الإكسسوارات</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>خدماتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> تركيب مجاني</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> ترصيص بالكمبيوتر</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> كشف مجاني</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> توصيل سريع</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> صيانة وخدمة</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> استشارات فنية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© <span id="currentYear">2024</span> الرواد للكوتش والبطاريات والجنوط - محافظة البحيرة - مركز بدر - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.5rem;">تصميم وتطوير: فريق خدمة عملاء الرواد | هاتف: 01063221136</p>
+        </div>
+    </footer>
+
+    <!-- رسالة تأكيد -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // بيانات المنتجات الكاملة
+        const productsData = {
+            tires: [
+                {
+                    id: 1,
+                    name: "كوتش سيارة ملاكي 13-14-15 بوصة",
+                    category: "tires",
+                    subcategory: "ملاكي",
+                    price: 1450,
+                    oldPrice: 1750,
+                    sizes: ["165/70R13", "175/65R14", "185/60R15", "195/55R15"],
+                    brands: ["ميشلان", "بريدجستون", "جوديير", "كونتيننتال"],
+                    description: "كوتش سيارات ملاكي بجودة عالية، متوفر بجميع المقاسات والماركات العالمية",
+                    badge: "hot",
+                    rating: 4.5,
+                    stock: "متوفر",
+                    warranty: "ضمان 5 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 2,
+                    name: "كوتش سيارة سيدان 16-17 بوصة",
+                    category: "tires",
+                    subcategory: "سيدان",
+                    price: 2100,
+                    oldPrice: 2500,
+                    sizes: ["205/55R16", "215/50R17", "225/45R17", "235/45R18"],
+                    brands: ["بيريللي", "دونلوب", "هانكوك", "يوكوهاما"],
+                    description: "كوتش سيارات سيدان رياضية، أداء عالي وتصميم رياضي",
+                    badge: "new",
+                    rating: 4.7,
+                    stock: "متوفر",
+                    warranty: "ضمان 4 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 3,
+                    name: "كوتش SUV و4x4",
+                    category: "tires",
+                    subcategory: "SUV",
+                    price: 2800,
+                    oldPrice: 3200,
+                    sizes: ["235/65R17", "245/60R18", "255/55R19", "265/50R20"],
+                    brands: ["BFGoodrich", "كوبر", "تويو", "نكسن"],
+                    description: "كوتشات SUV رياضية وعائلية، تحمل عالي وتصميم مميز",
+                    badge: "offer",
+                    rating: 4.8,
+                    stock: "متوفر",
+                    warranty: "ضمان 6 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 4,
+                    name: "كوتش نقل خفيف",
+                    category: "tires",
+                    subcategory: "نقل",
+                    price: 3200,
+                    oldPrice: 3800,
+                    sizes: ["7.00R16", "7.50R16", "8.25R16", "9.00R16"],
+                    brands: ["ميشلان", "بريدجستون", "جوديير", "يوكوهاما"],
+                    description: "كوتشات نقل خفيف وربع نقل، متانة عالية وتحمّل للأوزان الثقيلة",
+                    badge: "hot",
+                    rating: 4.6,
+                    stock: "متوفر",
+                    warranty: "ضمان 3 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 5,
+                    name: "كوتش نقل ثقيل وشاحنات",
+                    category: "tires",
+                    subcategory: "نقل ثقيل",
+                    price: 4500,
+                    oldPrice: 5200,
+                    sizes: ["10.00R20", "11.00R20", "12.00R20", "13.00R20"],
+                    brands: ["ميشلان", "بريدجستون", "كونتيننتال", "بيريللي"],
+                    description: "كوتشات نقل ثقيل وشاحنات، صناعة أوروبية وجودة فائقة",
+                    badge: null,
+                    rating: 4.9,
+                    stock: "متوفر",
+                    warranty: "ضمان 4 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 6,
+                    name: "كوتش ميكروباص",
+                    category: "tires",
+                    subcategory: "ميكروباص",
+                    price: 2500,
+                    oldPrice: 2900,
+                    sizes: ["185R14C", "195R14C", "205R14C", "215R15C"],
+                    brands: ["جوديير", "دونلوب", "هانكوك", "تويو"],
+                    description: "كوتشات ميكروباص ورحلات، أمان عالي ومتانة فائقة",
+                    badge: "offer",
+                    rating: 4.5,
+                    stock: "متوفر",
+                    warranty: "ضمان 5 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 7,
+                    name: "كوتش تريلات وأتوبيسات",
+                    category: "tires",
+                    subcategory: "تريلات",
+                    price: 5500,
+                    oldPrice: 6200,
+                    sizes: ["275/70R22.5", "295/75R22.5", "315/80R22.5"],
+                    brands: ["ميشلان", "بريدجستون", "جوديير"],
+                    description: "كوتشات تريلات وأتوبيسات نقل الركاب، صناعة عالمية",
+                    badge: null,
+                    rating: 4.8,
+                    stock: "متوفر",
+                    warranty: "ضمان 3 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 8,
+                    name: "كوتش دراجات نارية",
+                    category: "tires",
+                    subcategory: "دراجات",
+                    price: 850,
+                    oldPrice: 1100,
+                    sizes: ["2.75-18", "3.00-17", "100/90-18", "120/80-17"],
+                    brands: ["ميشلان", "بريدجستون", "دونلوب", "بيريللي"],
+                    description: "كوتشات دراجات نارية، أداء عالي وتصميم رياضي",
+                    badge: "new",
+                    rating: 4.4,
+                    stock: "متوفر",
+                    warranty: "ضمان 2 سنوات",
+                    delivery: "توصيل مجاني"
+                }
+            ],
+            batteries: [
+                {
+                    id: 9,
+                    name: "بطارية 40-45 أمبير",
+                    category: "batteries",
+                    subcategory: "صغيرة",
+                    price: 1450,
+                    oldPrice: 1700,
+                    capacities: ["40 أمبير", "45 أمبير"],
+                    brands: ["فارتا", "بوش", "أميكرون", "ديليب"],
+                    description: "بطاريات سيارات صغيرة وميكروباص صغير، ضمان 18 شهر",
+                    badge: "offer",
+                    rating: 4.5,
+                    stock: "متوفر",
+                    warranty: "ضمان 18 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 10,
+                    name: "بطارية 55-60 أمبير",
+                    category: "batteries",
+                    subcategory: "متوسطة",
+                    price: 1850,
+                    oldPrice: 2200,
+                    capacities: ["55 أمبير", "60 أمبير"],
+                    brands: ["فارتا", "بوش", "سورون", "مودو"],
+                    description: "بطاريات سيارات ملاكي متوسطة الحجم، ضمان 24 شهر",
+                    badge: "hot",
+                    rating: 4.6,
+                    stock: "متوفر",
+                    warranty: "ضمان 24 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 11,
+                    name: "بطارية 70-75 أمبير",
+                    category: "batteries",
+                    subcategory: "كبيرة",
+                    price: 2200,
+                    oldPrice: 2600,
+                    capacities: ["70 أمبير", "75 أمبير"],
+                    brands: ["فارتا", "بوش", "فولتك", "سلفر"],
+                    description: "بطاريات سيارات دفع رباعي وكبيرة، ضمان 30 شهر",
+                    badge: "hot",
+                    rating: 4.7,
+                    stock: "متوفر",
+                    warranty: "ضمان 30 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 12,
+                    name: "بطارية 90-100 أمبير",
+                    category: "batteries",
+                    subcategory: "كبيرة جداً",
+                    price: 2800,
+                    oldPrice: 3200,
+                    capacities: ["90 أمبير", "100 أمبير"],
+                    brands: ["فارتا", "بوش", "أميكرون", "ديليب"],
+                    description: "بطاريات سيارات الدفع الرباعي الكبيرة، ضمان 36 شهر",
+                    badge: null,
+                    rating: 4.8,
+                    stock: "متوفر",
+                    warranty: "ضمان 36 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 13,
+                    name: "بطارية 120-150 أمبير",
+                    category: "batteries",
+                    subcategory: "شاحنات",
+                    price: 3500,
+                    oldPrice: 4200,
+                    capacities: ["120 أمبير", "150 أمبير"],
+                    brands: ["فارتا", "بوش", "سورون", "مودو"],
+                    description: "بطاريات شاحنات نقل خفيف، ضمان 24 شهر",
+                    badge: "offer",
+                    rating: 4.6,
+                    stock: "متوفر",
+                    warranty: "ضمان 24 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 14,
+                    name: "بطارية 180-200 أمبير",
+                    category: "batteries",
+                    subcategory: "نقل ثقيل",
+                    price: 4800,
+                    oldPrice: 5500,
+                    capacities: ["180 أمبير", "200 أمبير"],
+                    brands: ["فارتا", "بوش", "أميكرون"],
+                    description: "بطاريات نقل ثقيل وتريلات، ضمان 18 شهر",
+                    badge: null,
+                    rating: 4.7,
+                    stock: "متوفر",
+                    warranty: "ضمان 18 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 15,
+                    name: "بطارية جافة لا تحتاج صيانة",
+                    category: "batteries",
+                    subcategory: "جافة",
+                    price: 3200,
+                    oldPrice: 3800,
+                    capacities: ["60 أمبير", "70 أمبير", "80 أمبير"],
+                    brands: ["فارتا", "بوش", "أميكرون"],
+                    description: "بطاريات جافة لا تحتاج إلى صيانة، ضمان 48 شهر",
+                    badge: "new",
+                    rating: 4.9,
+                    stock: "متوفر",
+                    warranty: "ضمان 48 شهر",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 16,
+                    name: "بطارية سيارة هايبرد وكهربائية",
+                    category: "batteries",
+                    subcategory: "هايبرد",
+                    price: 6500,
+                    oldPrice: 7800,
+                    capacities: ["خاصة بالهايبرد"],
+                    brands: ["فارتا", "بوش", "أميكرون"],
+                    description: "بطاريات سيارات هايبرد وكهربائية، تكنولوجيا متطورة",
+                    badge: "new",
+                    rating: 4.8,
+                    stock: "متوفر",
+                    warranty: "ضمان 60 شهر",
+                    delivery: "توصيل مجاني"
+                }
+            ],
+            rims: [
+                {
+                    id: 17,
+                    name: "جنوط ستيل مقاس 13-15 بوصة",
+                    category: "rims",
+                    subcategory: "ستيل",
+                    price: 1100,
+                    oldPrice: 1400,
+                    sizes: ["13 بوصة", "14 بوصة", "15 بوصة"],
+                    brands: ["Ronal", "ATS", "جنوط صيني", "جنوط تركي"],
+                    description: "جنوط ستيل للسيارات الصغيرة والمتوسطة، متانة عالية",
+                    badge: "offer",
+                    rating: 4.3,
+                    stock: "متوفر",
+                    warranty: "ضمان 3 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 18,
+                    name: "جنوط ألومنيوم مقاس 15-17 بوصة",
+                    category: "rims",
+                    subcategory: "ألومنيوم",
+                    price: 1800,
+                    oldPrice: 2200,
+                    sizes: ["15 بوصة", "16 بوصة", "17 بوصة"],
+                    brands: ["Ronal", "BBS", "Enkei", "OZ Racing"],
+                    description: "جنوط ألومنيوم خفيفة الوزن، تصميم رياضي وجميل",
+                    badge: "hot",
+                    rating: 4.6,
+                    stock: "متوفر",
+                    warranty: "ضمان 5 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 19,
+                    name: "جنوط SUV مقاس 17-20 بوصة",
+                    category: "rims",
+                    subcategory: "SUV",
+                    price: 2500,
+                    oldPrice: 3000,
+                    sizes: ["17 بوصة", "18 بوصة", "19 بوصة", "20 بوصة"],
+                    brands: ["ATS", "MSW", "Vossen", "HRE"],
+                    description: "جنوط SUV رياضية، تصميم قوي ومناسب للطرق الوعرة",
+                    badge: "new",
+                    rating: 4.7,
+                    stock: "متوفر",
+                    warranty: "ضمان 4 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 20,
+                    name: "جنوط سبور مقاس 18-22 بوصة",
+                    category: "rims",
+                    subcategory: "سبور",
+                    price: 3500,
+                    oldPrice: 4200,
+                    sizes: ["18 بوصة", "19 بوصة", "20 بوصة", "22 بوصة"],
+                    brands: ["BBS", "OZ Racing", "Enkei", "Vossen"],
+                    description: "جنوط سبور عالية الجودة، تصميم رياضي وجذاب",
+                    badge: null,
+                    rating: 4.8,
+                    stock: "متوفر",
+                    warranty: "ضمان 6 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 21,
+                    name: "جنوط شاحنات نقل خفيف",
+                    category: "rims",
+                    subcategory: "نقل",
+                    price: 2800,
+                    oldPrice: 3400,
+                    sizes: ["16 بوصة", "17 بوصة"],
+                    brands: ["جنوط تركي", "جنوط صيني", "جنوط ألماني"],
+                    description: "جنوط شاحنات نقل خفيف، متانة عالية وتحمّل للأوزان",
+                    badge: "offer",
+                    rating: 4.5,
+                    stock: "متوفر",
+                    warranty: "ضمان 3 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 22,
+                    name: "جنوط تريلات ونقل ثقيل",
+                    category: "rims",
+                    subcategory: "نقل ثقيل",
+                    price: 4200,
+                    oldPrice: 5000,
+                    sizes: ["20 بوصة", "22.5 بوصة"],
+                    brands: ["جنوط ألماني", "جنوط تركي"],
+                    description: "جنوط تريلات ونقل ثقيل، صناعة أوروبية وجودة فائقة",
+                    badge: null,
+                    rating: 4.6,
+                    stock: "متوفر",
+                    warranty: "ضمان 4 سنوات",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 23,
+                    name: "جنوط تركيب + ترصيص مجاني",
+                    category: "rims",
+                    subcategory: "خدمة",
+                    price: 3200,
+                    oldPrice: 3800,
+                    sizes: ["جميع المقاسات"],
+                    brands: ["جميع الماركات"],
+                    description: "خدمة تركيب جنوط مع ترصيص مجاني على الكمبيوتر",
+                    badge: "hot",
+                    rating: 4.9,
+                    stock: "متوفر",
+                    warranty: "ضمان سنتين على الخدمة",
+                    delivery: "توصيل مجاني"
+                },
+                {
+                    id: 24,
+                    name: "جنوط فايكنج وسبايدر",
+                    category: "rims",
+                    subcategory: "فايكنج",
+                    price: 2800,
+                    oldPrice: 3500,
+                    sizes: ["17 بوصة", "18 بوصة", "19 بوصة"],
+                    brands: ["جنوط تركي", "جنوط صيني"],
+                    description: "جنوط فايكنج وسبايدر بتصميمات جذابة ومتنوعة",
+                    badge: "new",
+                    rating: 4.5,
+                    stock: "متوفر",
+                    warranty: "ضمان 3 سنوات",
+                    delivery: "توصيل مجاني"
+                }
+            ]
+        };
+
+        // بيانات العروض
+        const offersData = [
+            {
+                title: "خصم 20% على بطاريات 70 أمبير",
+                description: "عرض خاص لفترة محدودة على بطاريات 70 أمبير من ماركة فارتا وبوش",
+                discount: "20% خصم",
+                validUntil: "30/12/2024",
+                code: "BATT70"
+            },
+            {
+                title: "كوتش + ترصيص مجاني",
+                description: "عند شراء 4 كوتشات تحصل على ترصيص مجاني على الكمبيوتر",
+                discount: "خدمة مجانية",
+                validUntil: "مفتوح",
+                code: "FREEALIGN"
+            },
+            {
+                title: "تركيب مجاني للجنوط",
+                description: "تركيب مجاني لأي جنوط تشتريها من متجرنا",
+                discount: "تركيب مجاني",
+                validUntil: "مفتوح",
+                code: "FREEFIT"
+            },
+            {
+                title: "عرض كومبو كوتش + بطارية",
+                description: "عند شراء 4 كوتشات + بطارية تحصل على خصم إضافي 10%",
+                discount: "خصم 10% إضافي",
+                validUntil: "15/01/2025",
+                code: "COMBO10"
+            }
+        ];
+
+        // بيانات الماركات
+        const brandsData = [
+            { name: "ميشلان", category: "tires", icon: "fa-tire" },
+            { name: "بريدجستون", category: "tires", icon: "fa-tire" },
+            { name: "جوديير", category: "tires", icon: "fa-tire" },
+            { name: "بيريللي", category: "tires", icon: "fa-tire" },
+            { name: "كونتيننتال", category: "tires", icon: "fa-tire" },
+            { name: "يوكوهاما", category: "tires", icon: "fa-tire" },
+            { name: "فارتا", category: "batteries", icon: "fa-car-battery" },
+            { name: "بوش", category: "batteries", icon: "fa-car-battery" },
+            { name: "أميكرون", category: "batteries", icon: "fa-car-battery" },
+            { name: "ديليب", category: "batteries", icon: "fa-car-battery" },
+            { name: "سورون", category: "batteries", icon: "fa-car-battery" },
+            { name: "مودو", category: "batteries", icon: "fa-car-battery" },
+            { name: "Ronal", category: "rims", icon: "fa-cog" },
+            { name: "BBS", category: "rims", icon: "fa-cog" },
+            { name: "Enkei", category: "rims", icon: "fa-cog" },
+            { name: "OZ Racing", category: "rims", icon: "fa-cog" },
+            { name: "ATS", category: "rims", icon: "fa-cog" },
+            { name: "MSW", category: "rims", icon: "fa-cog" }
+        ];
+
+        // معلومات المتجر
+        const storeInfo = {
+            name: "الرواد للكوتش والبطاريات والجنوط",
+            phone: "01063221136",
+            whatsapp: "201063221136",
+            location: "محافظة البحيرة - مركز بدر",
+            address: "محافظة البحيرة - مركز بدر - أمام مدرسة بدر الثانوية",
+            workingHours: "من الساعة 8 صباحاً حتى 12 مساءً - جميع أيام الأسبوع"
+        };
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديث السنة في الفوتر
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // تهيئة القائمة المتنقلة
+            initMobileMenu();
+            
+            // تحميل المنتجات
+            loadAllProducts();
+            
+            // تحميل العروض
+            loadOffers();
+            
+            // تحميل الماركات
+            loadBrands();
+            
+            // تحميل المقاسات
+            loadSpecs();
+            
+            // تهيئة البحث
+            initSearch();
+            
+            // تهيئة تصفية المنتجات
+            initProductFilter();
+            
+            // إضافة تأثير التمرير السلس
+            initSmoothScroll();
+            
+            // تهيئة زر العودة للأعلى
+            initBackToTop();
+            
+            // تحديث القائمة النشطة عند التمرير
+            window.addEventListener('scroll', updateActiveNavLink);
+            
+            // إضافة تأثير التمرير على الهيدر
+            window.addEventListener('scroll', handleHeaderScroll);
+        });
+
+        // تهيئة القائمة المتنقلة
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : 
+                    '<i class="fas fa-bars"></i>';
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        }
+
+        // تحميل جميع المنتجات
+        function loadAllProducts() {
+            const productsGrid = document.getElementById('productsGrid');
+            productsGrid.innerHTML = '';
+            
+            // دمج جميع المنتجات
+            const allProducts = [
+                ...productsData.tires,
+                ...productsData.batteries,
+                ...productsData.rims
+            ];
+            
+            // عرض جميع المنتجات
+            allProducts.forEach(product => {
+                productsGrid.appendChild(createProductCard(product));
+            });
+        }
+
+        // إنشاء بطاقة منتج
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.setAttribute('data-category', product.category);
+            card.setAttribute('data-id', product.id);
+            
+            // تحديد البادجة
+            let badgeHtml = '';
+            if (product.badge) {
+                badgeHtml = `<div class="product-badge ${product.badge}">${getBadgeText(product.badge)}</div>`;
+            }
+            
+            // تحديد الصورة بناءً على الفئة
+            let imageSrc = getProductImage(product.category, product.subcategory);
+            
+            // تحديد المقاسات أو السعات
+            let specsHtml = '';
+            if (product.sizes) {
+                product.sizes.forEach(size => {
+                    specsHtml += `<span class="spec-item">${size}</span>`;
+                });
+            } else if (product.capacities) {
+                product.capacities.forEach(capacity => {
+                    specsHtml += `<span class="spec-item">${capacity}</span>`;
+                });
+            }
+            
+            // تحديد السعر القديم
+            let oldPriceHtml = '';
+            let discountBadge = '';
+            if (product.oldPrice) {
+                const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+                oldPriceHtml = `<span class="old-price">${product.oldPrice} ج.م</span>`;
+                discountBadge = `<span class="discount-badge">${discount}%</span>`;
+            }
+            
+            // تقييم النجوم
+            let ratingHtml = '';
+            if (product.rating) {
+                ratingHtml = `<div class="rating">${getStarRating(product.rating)}</div>`;
+            }
+            
+            card.innerHTML = `
+                ${badgeHtml}
+                <div class="product-image">
+                    <img src="${imageSrc}" alt="${product.name}" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">${getCategoryName(product.category)} • ${product.subcategory}</span>
+                    <h3 class="product-title">${product.name}</h3>
+                    ${ratingHtml}
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-specs">
+                        ${specsHtml}
+                    </div>
+                    <div class="price-section">
+                        <div>
+                            ${discountBadge}
+                            <span class="current-price">${product.price} ج.م</span>
+                            ${oldPriceHtml}
+                        </div>
+                        <span class="price-note">${product.stock}</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-action btn-whatsapp" onclick="orderViaWhatsapp(${product.id})">
+                            <i class="fab fa-whatsapp"></i> طلب
+                        </button>
+                        <button class="btn-action btn-call-now" onclick="callForProduct(${product.id})">
+                            <i class="fas fa-phone"></i> استفسار
+                        </button>
+                        <button class="btn-action btn-details" onclick="showProductDetails(${product.id})">
+                            <i class="fas fa-info-circle"></i> تفاصيل
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // الحصول على نص البادجة
+        function getBadgeText(badgeType) {
+            switch(badgeType) {
+                case 'hot': return 'الأكثر مبيعاً';
+                case 'new': return 'جديد';
+                case 'offer': return 'عرض خاص';
+                default: return '';
+            }
+        }
+
+        // الحصول على صورة المنتج
+        function getProductImage(category, subcategory) {
+            const baseUrl = 'https://images.unsplash.com/photo-';
+            const images = {
+                tires: {
+                    ملاكي: '1617814076231-9b2c0b662690?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    سيدان: '1621887520088-74a2b6f3cdd0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    SUV: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    نقل: '1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    'نقل ثقيل': '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    ميكروباص: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    تريلات: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    دراجات: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+                },
+                batteries: {
+                    صغيرة: '1601924582975-7e670c8a88f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    متوسطة: '1611241893603-3c359704e0ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    كبيرة: '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    'كبيرة جداً': '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    شاحنات: '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    'نقل ثقيل': '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    جافة: '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    هايبرد: '1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+                },
+                rims: {
+                    ستيل: '1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    ألومنيوم: '1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    SUV: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    سبور: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    نقل: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    'نقل ثقيل': '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    خدمة: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                    فايكنج: '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+                }
+            };
+            
+            return baseUrl + (images[category]?.[subcategory] || '1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+
+        // الحصول على اسم الفئة
+        function getCategoryName(category) {
+            switch(category) {
+                case 'tires': return 'كوتش';
+                case 'batteries': return 'بطارية';
+                case 'rims': return 'جنط';
+                default: return 'منتج';
+            }
+        }
+
+        // الحصول على تقييم النجوم
+        function getStarRating(rating) {
+            const fullStars = Math.floor(rating);
+            const halfStar = rating % 1 >= 0.5;
+            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+            
+            let stars = '';
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="fas fa-star"></i>';
+            }
+            if (halfStar) {
+                stars += '<i class="fas fa-star-half-alt"></i>';
+            }
+            for (let i = 0; i < emptyStars; i++) {
+                stars += '<i class="far fa-star"></i>';
+            }
+            
+            return stars + ` <span style="font-size: 0.9rem; color: #718096;">(${rating})</span>`;
+        }
+
+        // تحميل العروض
+        function loadOffers() {
+            const offersSlider = document.querySelector('.offers-slider');
+            offersSlider.innerHTML = '';
+            
+            offersData.forEach(offer => {
+                const offerSlide = document.createElement('div');
+                offerSlide.className = 'offer-slide';
+                offerSlide.innerHTML = `
+                    <div class="offer-tag">${offer.discount}</div>
+                    <h3>${offer.title}</h3>
+                    <p>${offer.description}</p>
+                    <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid #e2e8f0;">
+                        <p style="color: #4a5568; margin-bottom: 0.5rem;">
+                            <strong><i class="fas fa-tag"></i> الكود:</strong> <span style="background: #f7fafc; padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace;">${offer.code}</span>
+                        </p>
+                        <p style="color: #4a5568;">
+                            <strong><i class="fas fa-clock"></i> صالح حتى:</strong> ${offer.validUntil}
+                        </p>
+                    </div>
+                `;
+                offersSlider.appendChild(offerSlide);
+            });
+        }
+
+        // تحميل الماركات
+        function loadBrands() {
+            const brandsGrid = document.querySelector('.brands-grid');
+            brandsGrid.innerHTML = '';
+            
+            brandsData.forEach(brand => {
+                const brandItem = document.createElement('div');
+                brandItem.className = 'brand-item';
+                brandItem.setAttribute('data-category', brand.category);
+                brandItem.setAttribute('title', `انقر لعرض منتجات ${brand.name}`);
+                brandItem.innerHTML = `
+                    <div class="brand-icon">
+                        <i class="fas ${brand.icon}"></i>
+                    </div>
+                    <span>${brand.name}</span>
+                `;
+                
+                // إضافة حدث النقر لتصفية المنتجات حسب الماركة
+                brandItem.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    const brandName = this.querySelector('span').textContent;
+                    
+                    // تنشيط تبويب الفئة المناسبة
+                    document.querySelectorAll('.category-tab').forEach(tab => {
+                        tab.classList.remove('active');
+                        if (tab.getAttribute('data-category') === category) {
+                            tab.classList.add('active');
+                        }
+                    });
+                    
+                    // تصفية المنتجات
+                    filterProductsByCategory(category, brandName);
+                    
+                    // التمرير إلى قسم المنتجات
+                    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // عرض رسالة
+                    showToast(`تم عرض منتجات ${brand.name}`);
+                });
+                
+                brandsGrid.appendChild(brandItem);
+            });
+        }
+
+        // تحميل المقاسات
+        function loadSpecs() {
+            // مقاسات الكوتشات
+            const tireSizes = [
+                { title: "سيارات صغيرة", sizes: ["165/70R13", "175/65R14", "185/60R15"] },
+                { title: "سيارات متوسطة", sizes: ["195/55R15", "205/55R16", "215/50R17"] },
+                { title: "سيارات كبيرة", sizes: ["225/45R17", "235/45R18", "245/40R18"] },
+                { title: "SUV صغيرة", sizes: ["215/65R16", "225/65R17", "235/60R17"] },
+                { title: "SUV كبيرة", sizes: ["245/65R17", "255/60R18", "265/50R20"] },
+                { title: "نقل خفيف", sizes: ["7.00R16", "7.50R16", "8.25R16"] },
+                { title: "نقل ثقيل", sizes: ["10.00R20", "11.00R20", "12.00R20"] }
+            ];
+            
+            const tireSizesContainer = document.querySelector('#tire-sizes .specs-grid');
+            tireSizes.forEach(item => {
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item-card';
+                specItem.innerHTML = `
+                    <div class="spec-item-title">${item.title}</div>
+                    <div class="spec-item-sizes">${item.sizes.join(' • ')}</div>
+                `;
+                tireSizesContainer.appendChild(specItem);
+            });
+            
+            // أنواع البطاريات
+            const batteryTypes = [
+                { title: "سيارات صغيرة", types: ["40 أمبير", "45 أمبير", "50 أمبير"] },
+                { title: "سيارات متوسطة", types: ["55 أمبير", "60 أمبير", "65 أمبير"] },
+                { title: "سيارات كبيرة", types: ["70 أمبير", "75 أمبير", "80 أمبير"] },
+                { title: "SUV و4x4", types: ["90 أمبير", "100 أمبير", "110 أمبير"] },
+                { title: "نقل خفيف", types: ["120 أمبير", "150 أمبير"] },
+                { title: "نقل ثقيل", types: ["180 أمبير", "200 أمبير"] }
+            ];
+            
+            const batteryTypesContainer = document.querySelector('#battery-types .specs-grid');
+            batteryTypes.forEach(item => {
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item-card';
+                specItem.innerHTML = `
+                    <div class="spec-item-title">${item.title}</div>
+                    <div class="spec-item-sizes">${item.types.join(' • ')}</div>
+                `;
+                batteryTypesContainer.appendChild(specItem);
+            });
+            
+            // مقاسات الجنوط
+            const rimSizes = [
+                { title: "سيارات صغيرة", sizes: ["13 بوصة", "14 بوصة", "15 بوصة"] },
+                { title: "سيارات متوسطة", sizes: ["15 بوصة", "16 بوصة", "17 بوصة"] },
+                { title: "سيارات كبيرة", sizes: ["17 بوصة", "18 بوصة", "19 بوصة"] },
+                { title: "SUV صغيرة", sizes: ["16 بوصة", "17 بوصة", "18 بوصة"] },
+                { title: "SUV كبيرة", sizes: ["18 بوصة", "19 بوصة", "20 بوصة"] },
+                { title: "نقل خفيف", sizes: ["16 بوصة", "17 بوصة"] },
+                { title: "نقل ثقيل", sizes: ["20 بوصة", "22.5 بوصة"] }
+            ];
+            
+            const rimSizesContainer = document.querySelector('#rim-sizes .specs-grid');
+            rimSizes.forEach(item => {
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item-card';
+                specItem.innerHTML = `
+                    <div class="spec-item-title">${item.title}</div>
+                    <div class="spec-item-sizes">${item.sizes.join(' • ')}</div>
+                `;
+                rimSizesContainer.appendChild(specItem);
+            });
+            
+            // حسب نوع السيارة
+            const carTypes = [
+                { title: "نيسان صني - فيات 128", specs: ["كوتش: 165/70R13", "بطارية: 45 أمبير", "جنط: 13 بوصة"] },
+                { title: "هيونداي فيرنا - كيا سيراتو", specs: ["كوتش: 185/65R15", "بطارية: 60 أمبير", "جنط: 15 بوصة"] },
+                { title: "تويوتا كورولا - هيونداي النترا", specs: ["كوتش: 195/55R16", "بطارية: 70 أمبير", "جنط: 16 بوصة"] },
+                { title: "تويوتا كامري - هوندا اكورد", specs: ["كوتش: 215/55R17", "بطارية: 75 أمبير", "جنط: 17 بوصة"] },
+                { title: "نيسان اكس تريل - هيونداي توسان", specs: ["كوتش: 225/65R17", "بطارية: 80 أمبير", "جنط: 17 بوصة"] },
+                { title: "تويوتا لاندكروزر - نيسان باترول", specs: ["كوتش: 265/65R18", "بطارية: 100 أمبير", "جنط: 18 بوصة"] },
+                { title: "نقل خفيف (نصف نقل)", specs: ["كوتش: 7.00R16", "بطارية: 120 أمبير", "جنط: 16 بوصة"] }
+            ];
+            
+            const carTypesContainer = document.querySelector('#car-types .specs-grid');
+            carTypes.forEach(item => {
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item-card';
+                specItem.innerHTML = `
+                    <div class="spec-item-title">${item.title}</div>
+                    <div class="spec-item-sizes">${item.specs.join('<br>')}</div>
+                `;
+                carTypesContainer.appendChild(specItem);
+            });
+        }
+
+        // تهيئة البحث
+        function initSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            // إضافة خاصية البحث أثناء الكتابة
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(performSearch, 500);
+            });
+        }
+
+        // تنفيذ البحث
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            const productsGrid = document.getElementById('productsGrid');
+            const allProducts = document.querySelectorAll('.product-card');
+            
+            if (!searchTerm) {
+                // إذا كان حقل البحث فارغاً، عرض جميع المنتجات
+                allProducts.forEach(product => {
+                    product.style.display = 'block';
+                });
+                return;
+            }
+            
+            let foundProducts = 0;
+            
+            allProducts.forEach(product => {
+                const title = product.querySelector('.product-title').textContent.toLowerCase();
+                const description = product.querySelector('.product-description').textContent.toLowerCase();
+                const category = product.getAttribute('data-category');
+                const specs = product.querySelector('.product-specs').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm) || 
+                    specs.includes(searchTerm) || getCategoryName(category).includes(searchTerm)) {
+                    product.style.display = 'block';
+                    foundProducts++;
+                    
+                    // إضافة تأثير تمييز للنص المطابق
+                    highlightText(product, searchTerm);
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+            
+            // عرض رسالة إذا لم يتم العثور على منتجات
+            if (foundProducts === 0) {
+                showToast(`لم يتم العثور على منتجات تطابق "${searchTerm}"`);
+            } else {
+                showToast(`تم العثور على ${foundProducts} منتج`);
+            }
+        }
+
+        // تمييز النص في نتائج البحث
+        function highlightText(element, searchTerm) {
+            const title = element.querySelector('.product-title');
+            const description = element.querySelector('.product-description');
+            
+            const highlight = (text, term) => {
+                if (!term) return text;
+                const regex = new RegExp(`(${term})`, 'gi');
+                return text.replace(regex, '<mark style="background: #ffeb3b; padding: 0 2px; border-radius: 2px;">$1</mark>');
+            };
+            
+            title.innerHTML = highlight(title.textContent, searchTerm);
+            description.innerHTML = highlight(description.textContent, searchTerm);
+        }
+
+        // تهيئة تصفية المنتجات
+        function initProductFilter() {
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const specsTabs = document.querySelectorAll('.specs-tab');
+            
+            // تصفية حسب الفئة
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // تحديث الأزرار النشطة
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // تصفية المنتجات
+                    filterProductsByCategory(category);
+                    
+                    // عرض رسالة
+                    let message = "عرض جميع المنتجات";
+                    if (category !== 'all') {
+                        message = `عرض ${getCategoryName(category)}`;
+                    }
+                    showToast(message);
+                });
+            });
+            
+            // تبديل تبويبات المقاسات
+            specsTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const specType = this.getAttribute('data-spec');
+                    
+                    // تحديث الأزرار النشطة
+                    specsTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // إظهار المحتوى المناسب
+                    document.querySelectorAll('.specs-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(specType).classList.add('active');
+                });
+            });
+        }
+
+        // تصفية المنتجات حسب الفئة والماركة
+        function filterProductsByCategory(category, brand = null) {
+            const productsGrid = document.getElementById('productsGrid');
+            const allProducts = document.querySelectorAll('.product-card');
+            
+            // إعادة تعيين تمييز البحث
+            document.getElementById('searchInput').value = '';
+            allProducts.forEach(product => {
+                const title = product.querySelector('.product-title');
+                const description = product.querySelector('.product-description');
+                title.innerHTML = title.textContent;
+                description.innerHTML = description.textContent;
+            });
+            
+            if (category === 'all') {
+                allProducts.forEach(product => {
+                    product.style.display = 'block';
+                });
+            } else if (category === 'offers') {
+                allProducts.forEach(product => {
+                    if (product.querySelector('.product-badge')) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            } else {
+                allProducts.forEach(product => {
+                    const productCategory = product.getAttribute('data-category');
+                    
+                    if (productCategory === category) {
+                        // إذا تم تحديد ماركة معينة
+                        if (brand) {
+                            const productName = product.querySelector('.product-title').textContent;
+                            if (productName.toLowerCase().includes(brand.toLowerCase())) {
+                                product.style.display = 'block';
+                            } else {
+                                product.style.display = 'none';
+                            }
+                        } else {
+                            product.style.display = 'block';
+                        }
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+            
+            // إضافة تأثير عند التصفية
+            productsGrid.style.opacity = '0.7';
+            setTimeout(() => {
+                productsGrid.style.opacity = '1';
+            }, 300);
+        }
+
+        // تهيئة التمرير السلس
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // التمرير السلس
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // تهيئة زر العودة للأعلى
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // تحديث القائمة النشطة
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // تأثير التمرير على الهيدر
+        function handleHeaderScroll() {
+            const header = document.querySelector('.main-header');
+            const nav = document.querySelector('.main-nav');
+            
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 25px rgba(0,0,0,0.25)';
+                header.style.padding = '0.8rem 0';
+                nav.style.top = '78px';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+                header.style.padding = '1.2rem 0';
+                nav.style.top = '82px';
+            }
+        }
+
+        // وظائف الطلب
+        function orderViaWhatsapp(productId) {
+            const product = findProductById(productId);
+            if (!product) {
+                showToast('حدث خطأ في العثور على المنتج');
+                return;
+            }
+            
+            const message = `السلام عليكم، أريد طلب ${product.name} من ${storeInfo.name}\nالسعر: ${product.price} ج.م\nالموقع: ${storeInfo.location}\n\nتفاصيل المنتج:\n${product.description}`;
+            const url = `https://wa.me/${storeInfo.whatsapp}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+            
+            showToast('جاري فتح واتساب لإرسال طلبك...');
+        }
+
+        function callForProduct(productId) {
+            const product = findProductById(productId);
+            if (!product) {
+                showToast('حدث خطأ في العثور على المنتج');
+                return;
+            }
+            
+            if (confirm(`هل تريد الاتصال للاستفسار عن ${product.name}؟`)) {
+                window.location.href = `tel:${storeInfo.phone}`;
+            }
+        }
+
+        function showProductDetails(productId) {
+            const product = findProductById(productId);
+            if (!product) {
+                showToast('حدث خطأ في العثور على المنتج');
+                return;
+            }
+            
+            let details = `تفاصيل المنتج:\n\n`;
+            details += `📦 الاسم: ${product.name}\n`;
+            details += `🏷️ الفئة: ${getCategoryName(product.category)} - ${product.subcategory}\n`;
+            details += `💰 السعر: ${product.price} ج.م`;
+            
+            if (product.oldPrice) {
+                const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+                details += ` (تخفيض ${discount}%)\n`;
+            } else {
+                details += `\n`;
+            }
+            
+            if (product.sizes) {
+                details += `📏 المقاسات المتوفرة: ${product.sizes.join(', ')}\n`;
+            } else if (product.capacities) {
+                details += `🔋 السعات المتوفرة: ${product.capacities.join(', ')}\n`;
+            }
+            
+            if (product.brands) {
+                details += `🏭 الماركات المتوفرة: ${product.brands.join(', ')}\n`;
+            }
+            
+            details += `\n📝 ${product.description}\n\n`;
+            details += `⭐ التقييم: ${product.rating}/5\n`;
+            details += `✅ الحالة: ${product.stock}\n`;
+            details += `🛡️ ${product.warranty}\n`;
+            details += `🚚 ${product.delivery}`;
+            
+            alert(details);
+        }
+
+        // البحث عن منتج بالرقم
+        function findProductById(productId) {
+            const allProducts = [
+                ...productsData.tires,
+                ...productsData.batteries,
+                ...productsData.rims
+            ];
+            
+            return allProducts.find(product => product.id === productId);
+        }
+
+        // عرض رسالة تأكيد
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // تحديث الأسعار تلقائياً (وظيفة تجريبية)
+        function updatePrices() {
+            console.log('سيتم تحديث الأسعار تلقائياً في الإصدارات القادمة...');
+        }
+
+        // تحديث الأسعار كل يوم (وظيفة تجريبية)
+        setInterval(updatePrices, 24 * 60 * 60 * 1000);
+    </script>
+</body>
+</html>
