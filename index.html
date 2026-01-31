@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرواد للكوتش والبطاريات - البحيرة</title>
+    <meta name="description" content="كوتشات - بطاريات - جنوط سيارات - توصيل مجاني - 01063221136">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background: #f5f7fa;
+            color: #333;
+            direction: rtl;
+            line-height: 1.6;
+        }
+        
+        /* الهيدر */
+        header {
+            background: #1a365d;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .logo i {
+            color: gold;
+            font-size: 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+        
+        .contact-top {
+            margin: 10px 0;
+        }
+        
+        .contact-top a {
+            color: white;
+            text-decoration: none;
+            background: #25D366;
+            padding: 8px 15px;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 5px;
+        }
+        
+        /* القائمة */
+        nav {
+            background: white;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+        }
+        
+        nav a {
+            color: #1a365d;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background: #f0f4ff;
+        }
+        
+        /* البانر */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-call {
+            background: #2b6cb0;
+        }
+        
+        /* المنتجات */
+        .products {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 150px;
+            background: #f0f4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img i {
+            font-size: 4rem;
+            color: #2b6cb0;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            color: #25D366;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .product-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .product-buttons a {
+            flex: 1;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-call {
+            background: #2b6cb0;
+            color: white;
+        }
+        
+        /* الطلب السريع */
+        .quick-order {
+            background: linear-gradient(135deg, #1a365d, #2d3748);
+            color: white;
+            padding: 3rem 1rem;
+            margin: 2rem 0;
+        }
+        
+        .quick-order form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-contact {
+            margin: 20px 0;
+        }
+        
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #aaa;
+        }
+        
+        /* الأزرار العائمة */
+        .floating-btns {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .float-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .float-btn.call {
+            background: #2b6cb0;
+        }
+        
+        /* للجوال */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-tire"></i>
+            <h1>الرواد للكوتش والبطاريات والجنوط</h1>
+        </div>
+        <p>محافظة البحيرة - مركز بدر | منذ 2010</p>
+        
+        <div class="contact-top">
+            <a href="https://wa.me/201063221136" target="_blank">
+                <i class="fab fa-whatsapp"></i> واتساب: 01063221136
+            </a>
+            <a href="tel:01063221136">
+                <i class="fas fa-phone"></i> اتصل الآن
+            </a>
+        </div>
+    </header>
+    
+    <!-- القائمة -->
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#tires">الكوتشات</a>
+        <a href="#batteries">البطاريات</a>
+        <a href="#order">اطلب الآن</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+    
+    <!-- البانر -->
+    <section class="hero" id="home">
+        <h2>👑 الرواد للكوتش والبطاريات والجنوط</h2>
+        <p>المتخصص الأول في البحيرة لتوريد وتركيب جميع إطارات وبطاريات وجنوط السيارات</p>
+        
+        <div class="hero-buttons">
+            <a href="#products" class="btn">
+                <i class="fas fa-shopping-cart"></i> عرض المنتجات
+            </a>
+            <a href="tel:01063221136" class="btn btn-call">
+                <i class="fas fa-phone"></i> اتصل للطلب
+            </a>
+            <a href="https://wa.me/201063221136" class="btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> واتساب مباشر
+            </a>
+        </div>
+    </section>
+    
+    <!-- المنتجات -->
+    <section class="products" id="products">
+        <h2 class="section-title">🛒 منتجاتنا</h2>
+        
+        <div class="product-grid">
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-tire"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">كوتشات سيارات ملاكي</h3>
+                    <p>جميع المقاسات 13-15 بوصة</p>
+                    <div class="product-price">من 1450 ج.م</div>
+                    <div class="product-buttons">
+                        <a href="https://wa.me/201063221136?text=أريد معلومات عن كوتشات سيارات ملاكي" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> واتساب
+                        </a>
+                        <a href="tel:01063221136" class="btn-call">
+                            <i class="fas fa-phone"></i> اتصل
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-car-battery"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">بطاريات سيارات</h3>
+                    <p>40-200 أمبير بضمان</p>
+                    <div class="product-price">من 1450 ج.م</div>
+                    <div class="product-buttons">
+                        <a href="https://wa.me/201063221136?text=أريد معلومات عن بطاريات السيارات" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> واتساب
+                        </a>
+                        <a href="tel:01063221136" class="btn-call">
+                            <i class="fas fa-phone"></i> اتصل
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">جنوط سيارات</h3>
+                    <p>جميع المقاسات والأشكال</p>
+                    <div class="product-price">من 1100 ج.م</div>
+                    <div class="product-buttons">
+                        <a href="https://wa.me/201063221136?text=أريد معلومات عن جنوط السيارات" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> واتساب
+                        </a>
+                        <a href="tel:01063221136" class="btn-call">
+                            <i class="fas fa-phone"></i> اتصل
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- الطلب السريع -->
+    <section class="quick-order" id="order">
+        <h2 class="section-title" style="color: white;">🚀 طلب سريع</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">املأ البيانات وسنتصل بك خلال دقائق</p>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label>اسمك الكريم:</label>
+                <input type="text" placeholder="اكتب اسمك" required>
+            </div>
+            
+            <div class="form-group">
+                <label>رقم هاتفك:</label>
+                <input type="tel" placeholder="مثال: 01063221136" required>
+            </div>
+            
+            <div class="form-group">
+                <label>اختر المنتج:</label>
+                <select required>
+                    <option value="">اختر منتج</option>
+                    <option value="tires">كوتشات سيارات</option>
+                    <option value="batteries">بطاريات سيارات</option>
+                    <option value="rims">جنوط سيارات</option>
+                    <option value="all">جميع المنتجات</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%; background: #25D366; border: none; color: white; padding: 12px; border-radius: 5px; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fab fa-whatsapp"></i> أرسل طلبي على واتساب
+            </button>
+        </form>
+    </section>
+    
+    <!-- الفوتر -->
+    <footer id="contact">
+        <h2>📍 تواصل معنا</h2>
+        
+        <div class="footer-contact">
+            <a href="tel:01063221136">
+                <i class="fas fa-phone"></i> 01063221136
+            </a>
+            <a href="https://wa.me/201063221136" target="_blank">
+                <i class="fab fa-whatsapp"></i> واتساب: 01063221136
+            </a>
+            <p><i class="fas fa-map-marker-alt"></i> البحيرة - مركز بدر</p>
+            <p><i class="fas fa-clock"></i> 8 صباحاً - 12 مساءً | جميع الأيام</p>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 الرواد للكوتش والبطاريات والجنوط - البحيرة</p>
+            <p>تصميم وتطوير: فريق الرواد | تلفون: 01063221136</p>
+        </div>
+    </footer>
+    
+    <!-- أزرار عائمة -->
+    <div class="floating-btns">
+        <a href="https://wa.me/201063221136" class="float-btn" target="_blank" title="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:01063221136" class="float-btn call" title="اتصل">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+    
+    <script>
+        // نموذج الطلب
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // جمع البيانات
+            const name = this.querySelector('input[type="text"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const product = this.querySelector('select').value;
+            
+            // نص الرسالة
+            const message = `📦 طلب جديد من موقع الرواد:
+            
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+🛒 المنتج: ${product}
+
+يرجى التواصل مع العميل.`;
+            
+            // فتح واتساب
+            window.open(`https://wa.me/201063221136?text=${encodeURIComponent(message)}`, '_blank');
+            
+            // رسالة تأكيد
+            alert('✅ تم إرسال طلبك بنجاح!\n\nسنتصل بك قريباً على الرقم: ' + phone);
+            
+            // مسح النموذج
+            this.reset();
+        });
+        
+        // القائمة النشطة
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
